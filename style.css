@@ -305,8 +305,8 @@ body.sloth-mode .zzz-container::after {
 .email-image-simple {
     display: block;
     margin: 30px auto 0;
-    max-width: 300px;
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     height: auto;
 }
 

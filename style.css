@@ -117,6 +117,9 @@ body.sloth-mode .sloth-mode-toggle {
     position: relative;
     overflow: hidden;
     transition: all calc(0.5s * var(--animation-speed)) ease;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
 }
 
 body.sloth-mode .hero-section {
@@ -317,6 +320,9 @@ body.sloth-mode .zzz-container::after {
     font-size: 1rem;
     transition: all calc(0.3s * var(--animation-speed)) ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .email-button:hover {
@@ -343,8 +349,13 @@ body.sloth-mode .zzz-container::after {
 
 .email-image-inline {
     max-height: 20px;
+    height: 20px;
     width: auto;
+    max-width: 100%;
+    display: inline-block;
     vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Footer */
@@ -357,6 +368,9 @@ footer {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
 }
 
 footer::before {

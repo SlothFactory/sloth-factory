@@ -301,79 +301,13 @@ body.sloth-mode .zzz-container::after {
     50% { opacity: 0.6; }
 }
 
-/* Email CTA */
-.email-cta {
-    margin-top: 20px;
+/* Email Image */
+.email-image-simple {
     display: block;
+    margin: 30px auto 0;
+    max-width: 300px;
     width: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-.email-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 18px 32px;
-    background: rgb(249, 245, 238);
-    border: 2px solid rgba(139, 115, 85, 0.2);
-    border-radius: 50px;
-    color: #6b5444;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all calc(0.3s * var(--animation-speed)) ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: relative;
-    min-height: 60px;
-}
-
-.email-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.2);
-    border-color: rgba(139, 115, 85, 0.4);
-    background: rgba(249, 245, 238, 1);
-}
-
-.email-button:hover .mail-icon {
-    animation: wiggle calc(0.5s * var(--animation-speed)) ease-in-out;
-}
-
-@keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-10deg); }
-    75% { transform: rotate(10deg); }
-}
-
-.mail-icon {
-    color: #8b7355;
-    flex-shrink: 0;
-    display: block;
-    position: relative;
-    z-index: 1;
-}
-
-.email-image-inline {
-    height: 20px;
-    width: auto;
-    max-width: 250px;
-    display: block;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    position: relative;
-    z-index: 1;
+    height: auto;
 }
 
 /* Footer */
@@ -462,31 +396,9 @@ footer a:hover {
         max-width: 200px;
     }
 
-    .email-button {
-        padding: 14px 24px;
-        font-size: 0.9rem;
-        display: flex !important;
-        background: rgb(249, 245, 238) !important;
-        min-height: 56px;
-    }
-
-    .email-cta {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        overflow: visible !important;
-    }
-
-    .email-image-inline {
-        height: 18px !important;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-
-    .mail-icon {
-        display: block !important;
-        visibility: visible !important;
+    .email-image-simple {
+        max-width: 250px;
+        margin-top: 25px;
     }
 
     /* Reduce animation intensity on mobile */

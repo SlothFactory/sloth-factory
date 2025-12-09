@@ -304,14 +304,22 @@ body.sloth-mode .zzz-container::after {
 /* Email CTA */
 .email-cta {
     margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .email-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 18px 32px;
-    background: rgba(249, 245, 238, 0.95);
+    background: rgb(249, 245, 238);
     border: 2px solid rgba(139, 115, 85, 0.2);
     border-radius: 50px;
     color: #6b5444;
@@ -320,9 +328,12 @@ body.sloth-mode .zzz-container::after {
     font-size: 1rem;
     transition: all calc(0.3s * var(--animation-speed)) ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    will-change: transform;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    min-height: 60px;
 }
 
 .email-button:hover {
@@ -345,17 +356,24 @@ body.sloth-mode .zzz-container::after {
 .mail-icon {
     color: #8b7355;
     flex-shrink: 0;
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .email-image-inline {
-    max-height: 20px;
     height: 20px;
     width: auto;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    max-width: 250px;
+    display: block;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    position: relative;
+    z-index: 1;
 }
 
 /* Footer */
@@ -447,6 +465,28 @@ footer a:hover {
     .email-button {
         padding: 14px 24px;
         font-size: 0.9rem;
+        display: flex !important;
+        background: rgb(249, 245, 238) !important;
+        min-height: 56px;
+    }
+
+    .email-cta {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        overflow: visible !important;
+    }
+
+    .email-image-inline {
+        height: 18px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .mail-icon {
+        display: block !important;
+        visibility: visible !important;
     }
 
     /* Reduce animation intensity on mobile */
